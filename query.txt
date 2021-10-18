@@ -20,11 +20,7 @@ scritta così è piu' efficiente. mi prendo la data odierna e faccio la differen
 
 SELECT *
 FROM `students`
-<<<<<<< HEAD
 WHERE TIMESTAMPDIFF(YEAR,`date_of_birth`,CURRENTDATE()) > 30
-=======
-WHERE TIMESTAMPDIFF(YEAR,`date_of_birth`,CURDATE()) > 30
->>>>>>> d4500fcd14e6b7bfac0713e0d862bda0c9201621
 
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
 laurea (286)

@@ -142,5 +142,9 @@ superare ciascuno dei suoi esam
 
 SELECT `exam_student`.`student_id`, `exams`.`course_id` , COUNT(`exam_student`.`student_id`) AS `tentativi` FROM `exam_student` INNER JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id` GROUP BY `exam_student`.`student_id`, `exams`.`course_id` ORDER BY `tentativi` DESC
 
+// stesso esercizio di prima ma con id sostituiti da nomi reali per rendere i dati piu' leggibili all'utente
+
+SELECT `students`.`name` AS `student_name`, `students`.`surname` AS `student_surname` , `courses`.`name` AS `course_name` , COUNT(`exam_student`.`student_id`) AS `exam_attempts` FROM `exam_student` INNER JOIN `students` ON `exam_student`.`student_id` = `students`.`id` INNER JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id` INNER JOIN `courses` ON `exams`.`course_id` = `courses`.`id` GROUP BY `exam_student`.`student_id`, `exams`.`course_id` ORDER BY `exam_attempts` DESC
+
 
 
